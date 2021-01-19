@@ -6,7 +6,7 @@
 
 	<nav>
 
-		<a href="#" class="mr-5 hover:text-green-500">Nos missions</a>
+		<a href="{{ route('jobs.index') }}" class="mr-5 hover:text-green-500">Nos missions</a>
 
 		@guest
 
