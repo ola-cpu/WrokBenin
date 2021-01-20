@@ -4,9 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+         <title>BeninWrok</title>
+
       <link rel="stylesheet"  href="{{ asset('css/app.css') }}">  
 
-        <title>BeninWrok</title>
+       
+
+         @livewireStyles
       
       
     </head>
@@ -15,6 +20,8 @@
       @include('partials.navbar')
       @yield('content')
       </div>
+
+      @livewireScripts
     
     </body>
 </html>
