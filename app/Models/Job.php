@@ -23,4 +23,22 @@ class Job extends Model
 
     	return $this->belongsTo('App\Models\User');
     }
+
+
+
+
+
+     public function likes()
+
+    {
+      return  $this->belongsToMany('App\Models\User');
+    }
+
+    public function isLiked()
+    {
+
+      if (auth()->check()) {
+            return  auth()->user()->likes->contains('id', $this->id);
+        }  
+    }
 }
