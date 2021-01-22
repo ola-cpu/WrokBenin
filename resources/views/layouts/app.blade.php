@@ -7,7 +7,11 @@
 
          <title>BeninWrok</title>
 
-      <link rel="stylesheet"  href="{{ asset('css/app.css') }}">  
+      <link rel="stylesheet"  href="{{ asset('css/app.css') }}">
+
+      <style>
+        [x-cloak] { display: none; }
+      </style>  
 
        
 
@@ -20,6 +24,8 @@
     <body>
       <div class="container mx-auto px-4 ">
       @include('partials.navbar')
+
+      <livewire:flash />
       @yield('content')
       </div>
 

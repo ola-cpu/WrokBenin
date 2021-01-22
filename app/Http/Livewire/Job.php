@@ -16,9 +16,13 @@ class Job extends Component
 			
 
 			auth()->user()->likes()->toggle($this->job->id);
+		} else {
+
+			$this->emit('flash','Merci de vous connecter pour ajouter une mission à vos favoris','error');
+
 		}
 
-		//emmetre un evenement flash message 
+
 	
 	}
 
