@@ -29,11 +29,23 @@ Route::get('/jobs/{id}',[JobController::class, 'show'])->name('jobs.show');
 Route::group(['middleware' => ['auth']], function (){
 
 
-Route::post('/submit/{job}', [ProposalController::class, 'store'])->name('proposals.store');
+
 
 
 Route::get('/home', function() {return view('home');
 })->name('home');
+
+
+});
+
+
+
+Route::group(['middleware' => ['auth',  'proposal']], function (){
+
+
+Route::post('/submit/{job}', [ProposalController::class, 'store'])->name('proposals.store');
+
+
 
 
 });
