@@ -19,6 +19,8 @@
 
 			@else
 
+					<a href="{{ route('conversation.index') }}" class="mr-5 hover:text-green-500" >Mes conversations</a>
+
 				<a href="{{ route('home') }}" class="mr-5 hover:text-green-500" >Tableau de bord</a>
 
 
