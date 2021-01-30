@@ -34,6 +34,11 @@ class ProposalController extends Controller
     {
 
     	$proposal = Proposal::findOrFail($request->proposal);
+
+    		if($proposal->job->user->id != auth()->user()->id){
+    			dd('nope');
+    		}
+
     	$proposal->fill(['validated' => 1]);
 
     		if ($proposal->isDirty()) {
